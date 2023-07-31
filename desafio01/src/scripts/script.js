@@ -1,12 +1,13 @@
+const result = document.getElementById('result')
 
-const result = document.querySelector('#result')
+const printEvenNumbers = () => {
+    let output = ''
 
-const pairNumbers = () => {
-    const inputNumber = parseInt(document.querySelector('.input-number').value)
-
-    if(inputNumber % 2 === 0) {
-        result.innerHTML = `O número ${inputNumber} é par`
-    } else {
-        result.innerHTML = `O número ${inputNumber} não é par`
+    for (let i = 1; i <= 1000; i++) {
+        if (i % 2 === 0) {
+            output += i + ' '
+        }
     }
+
+    result.innerHTML = output
 }
